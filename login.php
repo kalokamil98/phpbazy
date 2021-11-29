@@ -12,8 +12,8 @@
     else{
 
     $servername = "localhost";
-    $username = "root";
-    $password = "";
+    $username = "lepki";
+    $password = "MlodyDebil55";
     $database = "users";
 
 
