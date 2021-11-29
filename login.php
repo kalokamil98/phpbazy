@@ -29,9 +29,13 @@
 
     $login = $_POST['login'];
     $password = $_POST['password'];
+    $login = htmlentities($login, ENT_QUOTES, "UTF-8");
+		$password = htmlentities($password, ENT_QUOTES, "UTF-8");
 
-    $sql = "SELECT * from users WHERE login = '$login' and passwd = '$password'" ;
-$result = @$conn->query($sql);
+   //$sql = "SELECT * from users WHERE login = '$login' and passwd = '$password'" ;
+$result = @$conn->query(sprintf("SELECT * FROM users WHERE login = '%s' AND passwd = '%s'",
+		mysqli_real_escape_string($conn,$login),
+		mysqli_real_escape_string($conn,$password)));
 
     if($result){
 

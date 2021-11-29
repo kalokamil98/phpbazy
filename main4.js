@@ -26,3 +26,11 @@ const add = () => {
 };
 
 const user = document.getElementById("user");
+
+if (user == "uczen") {
+  let sheet = document.createElement("style");
+  sheet.innerHTML = "#del {display: none} #mod {display:none}";
+  console.log("elo");
+  document.querySelector(".add").style.display = "none";
+  document.body.appendChild(sheet);
+}
