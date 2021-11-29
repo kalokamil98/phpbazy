@@ -37,7 +37,11 @@ if (!isset($_SESSION['loged_in']))
 
 
 
+
+
+
 	require_once "connect.php";
+
 
 if($_SESSION['user'] == 'uczen'){
 $username = 'uczen';
@@ -46,7 +50,8 @@ $password = "zaq1@WSX";
 }
 
 
-echo"Witaj <b > $_SESSION[user] </b>";
+
+echo"Witaj <b id='user' >$_SESSION[user]</b>";
 echo "<a href='logout.php' class='logeout'>Wyloguj</a>";
 
 
@@ -136,8 +141,8 @@ for($i=0;$i<count($data);$i++){
 };
 
     
-echo "<td> <a style='text-decoration: none; background: none; color:white;' href='delete.php?table=$_GET[table]&id=$data[0]' ><button class='delete'> USUŃ</button> </a></td>";
-echo "<td><button class='update' onclick='update($data[0])'>MODYFIKUJ</button></td>";
+echo "<td id='del'> <a style='text-decoration: none; background: none; color:white;' href='delete.php?table=$_GET[table]&id=$data[0]' ><button class='delete'> USUŃ</button> </a></td>";
+echo "<td id='mod'><button class='update' onclick='update($data[0])'>MODYFIKUJ</button></td>";
 echo "</tr>";
 
 }

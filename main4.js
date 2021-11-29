@@ -24,3 +24,5 @@ const close_form = (x) => {
 const add = () => {
   document.querySelector(`#form_2`).style.display = "flex";
 };
+
+const user = document.getElementById("user");
