@@ -39,6 +39,12 @@ if (!isset($_SESSION['loged_in']))
 
 	require_once "connect.php";
 
+if($_SESSION['user'] == 'uczen'){
+$username = 'uczen';
+$password = "zaq1@WSX";
+
+}
+
 
 echo"Witaj <b > $_SESSION[user] </b>";
 echo "<a href='logout.php' class='logeout'>Wyloguj</a>";
