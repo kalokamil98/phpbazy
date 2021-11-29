@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link href="style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="papaj.ico" type="image/x-icon">
     <title>Wadowice study admin Panel</title>
   </head>
   <body>
